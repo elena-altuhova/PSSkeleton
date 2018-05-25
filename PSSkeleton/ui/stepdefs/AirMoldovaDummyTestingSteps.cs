@@ -3,11 +3,13 @@ using PSSkeleton.pageobjects;
 using System;
 using System.Threading;
 using TechTalk.SpecFlow;
+using NLog;
 
 namespace PSSkeleton.ui.stepdefs
 {
     public class AirMoldovaDummyTestingSteps : AbstractStepDefs
     {
+        
         LandingPage landingPage;
 
         [Given(@"user is populating login form with (.*) and (.*) combination")]

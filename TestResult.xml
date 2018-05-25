@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\icvasa\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-05-25" time="10:39:56">
+  <environment nunit-version="3.6.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\icvasa\source\repos\PSSkeleton" machine-name="EN32351" user="icvasa" user-domain="ENDAVA" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\icvasa\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" executed="True" result="Success" success="True" time="16.002" asserts="1">
+    <properties>
+      <property name="_PID" value="14852" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <results>
+      <test-suite type="TestSuite" name="PSSkeleton" executed="True" result="Success" success="True" time="15.971" asserts="1">
+        <results>
+          <test-suite type="TestSuite" name="Features" executed="True" result="Success" success="True" time="15.970" asserts="1">
+            <results>
+              <test-suite type="TestFixture" name="AirMoldovaDummyTestingFeature" description="AirMoldova dummy testing" executed="True" result="Success" success="True" time="15.963" asserts="1">
+                <properties>
+                  <property name="Description" value="AirMoldova dummy testing" />
+                </properties>
+                <results>
+                  <test-case name="PSSkeleton.Features.AirMoldovaDummyTestingFeature.NegativeLogin" description="Negative login" executed="True" result="Success" success="True" time="15.312" asserts="1">
+                    <properties>
+                      <property name="Description" value="Negative login" />
+                    </properties>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
