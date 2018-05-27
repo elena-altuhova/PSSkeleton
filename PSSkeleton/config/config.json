@@ -1,0 +1,9 @@
+{
+  "env": {
+    "uri": "http://127.0.0.1:4723/wd/hub"
+  },
+  "runner":  {
+    "platform": "Desktop",
+    "browser": "Chrome"
+  }
+  }

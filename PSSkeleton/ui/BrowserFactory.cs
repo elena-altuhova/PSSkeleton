@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
@@ -6,70 +7,83 @@ using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Safari;
 using System;
 using System.Collections.Generic;
+using PSSkeleton.resources.capabilities;
+using PSSkeleton.utils;
+using PSSkeleton.config;
 
 namespace PSSkeleton.ui
 {
     class BrowserFactory
     {
         private static readonly IDictionary<string, IWebDriver> Drivers = new Dictionary<string, IWebDriver>();
-        private static readonly string BasePath = AppDomain.CurrentDomain.BaseDirectory;
-        private static IWebDriver driver;
+        private static readonly string DriverPath = PathUtils.GetPath(@"resources\drivers");
+        private static IWebDriver _driver;
 
         public static IWebDriver Driver
         {
             get
             {
-                if (driver == null)
+                if (_driver == null)
                     throw new NullReferenceException("The WebDriver browser instance was not initialized. You should first call the method InitBrowser.");
-                return driver;
+                return _driver;
             }
             private set
             {
-                driver = value;
+                _driver = value;
             }
         }
 
         public static void InitBrowser(string browserName)
         {
-            switch (browserName)
+            DriverName _driverName = Enum.TryParse(browserName, true, out _driverName) ? _driverName : DriverName.Firefox;
+            switch (_driverName)
             {
-                case "Firefox":
-                    if (driver == null)
+                case DriverName.Firefox:
+                    if (_driver == null)
                     {
-                        driver = new FirefoxDriver(BasePath + "resources");
+                        _driver = new FirefoxDriver(DriverPath);
                         Drivers.Add("Firefox", Driver);
                     }
                     break;
 
-                case "IE":
-                    if (driver == null)
+                case DriverName.IE:
+                    if (_driver == null)
                     {
-                        driver = new InternetExplorerDriver(BasePath + "resources");
+                        _driver = new InternetExplorerDriver(DriverPath);
                         Drivers.Add("IE", Driver);
                     }
                     break;
 
-                case "Chrome":
-                    if (driver == null)
+                case DriverName.Chrome:
+                    if (_driver == null)
                     {
-                        driver = new ChromeDriver(BasePath + "resources");
+                        _driver = new ChromeDriver(DriverPath);
                         Drivers.Add("Chrome", Driver);
                     }
                     break;
 
-                case "Edge":
-                    if (driver == null)
+                case DriverName.Edge:
+                    if (_driver == null)
                     {
-                        driver = new EdgeDriver(BasePath + "resources");
+                        _driver = new EdgeDriver(DriverPath);
                         Drivers.Add("Edge", Driver);
                     }
                     break;
 
-                case "Safari":
-                    if (driver == null)
+                case DriverName.Safari:
+                    if (_driver == null)
                     {
-                        driver = new SafariDriver(BasePath + "resources");
+                        _driver = new SafariDriver(DriverPath);
                         Drivers.Add("Safari", Driver);
+                    }
+                    break;
+
+                case DriverName.Android:
+                    if ((_driver == null))
+                    {
+                        IDesCapabilities androidCap = new GetAndroidCapabilities();
+                        _driver = new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), androidCap.GetCapabilities());
+                        Drivers.Add("Android", Driver);
                     }
                     break;
             }

@@ -1,0 +1,6 @@
+﻿{
+  "platformName": "Android",
+  "deviceName": "Galaxy S8",
+  "appPackage": "md.airmoldova.app",
+  "appActivity": "solutions.smartadata.airmoldova.SplashScreenActivity"
+}

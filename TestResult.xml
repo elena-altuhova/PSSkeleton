@@ -1,28 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\icvasa\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2018-05-25" time="10:39:56">
-  <environment nunit-version="3.6.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\icvasa\source\repos\PSSkeleton" machine-name="EN32351" user="icvasa" user-domain="ENDAVA" />
+<test-results name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2018-05-25" time="14:35:38">
+  <environment nunit-version="3.6.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.15063.0" platform="Win32NT" cwd="C:\Users\ealtuhova\source\repos\PSSkeleton" machine-name="EN410078" user="ealtuhova" user-domain="ENDAVA" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\icvasa\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" executed="True" result="Success" success="True" time="16.002" asserts="1">
+  <test-suite type="Assembly" name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" executed="True" result="Success" success="True" time="21.477" asserts="1">
     <properties>
-      <property name="_PID" value="14852" />
+      <property name="_PID" value="11536" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <results>
-      <test-suite type="TestSuite" name="PSSkeleton" executed="True" result="Success" success="True" time="15.971" asserts="1">
+      <test-suite type="TestSuite" name="PSSkeleton" executed="True" result="Success" success="True" time="21.429" asserts="1">
         <results>
-          <test-suite type="TestSuite" name="Features" executed="True" result="Success" success="True" time="15.970" asserts="1">
+          <test-suite type="TestSuite" name="Features" executed="True" result="Success" success="True" time="21.428" asserts="1">
             <results>
-              <test-suite type="TestFixture" name="AirMoldovaDummyTestingFeature" description="AirMoldova dummy testing" executed="True" result="Success" success="True" time="15.963" asserts="1">
-                <properties>
-                  <property name="Description" value="AirMoldova dummy testing" />
-                </properties>
+              <test-suite type="TestSuite" name="Android" executed="True" result="Success" success="True" time="9.916" asserts="0">
                 <results>
-                  <test-case name="PSSkeleton.Features.AirMoldovaDummyTestingFeature.NegativeLogin" description="Negative login" executed="True" result="Success" success="True" time="15.312" asserts="1">
+                  <test-suite type="TestFixture" name="BookAFlightFeature" description="Book A Flight" executed="True" result="Success" success="True" time="9.893" asserts="0">
                     <properties>
-                      <property name="Description" value="Negative login" />
+                      <property name="Description" value="Book A Flight" />
                     </properties>
-                  </test-case>
+                    <results>
+                      <test-case name="PSSkeleton.Features.Android.BookAFlightFeature.BookAFlight" description="Book A Flight" executed="True" result="Inconclusive" success="False" time="9.021" asserts="0">
+                        <properties>
+                          <property name="Description" value="Book A Flight" />
+                        </properties>
+                        <reason>
+                          <message><![CDATA[One or more step definitions are not implemented yet.
+  BookAFlightSteps.WhenUserSelectsInDestinationField("Barcelona")]]></message>
+                        </reason>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="TestSuite" name="Web" executed="True" result="Success" success="True" time="21.428" asserts="1">
+                <results>
+                  <test-suite type="TestFixture" name="AirMoldovaDummyTestingFeature" description="AirMoldova dummy testing" executed="True" result="Success" success="True" time="11.502" asserts="1">
+                    <properties>
+                      <property name="Description" value="AirMoldova dummy testing" />
+                    </properties>
+                    <results>
+                      <test-case name="PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.NegativeLogin" description="Negative login" executed="True" result="Success" success="True" time="11.497" asserts="1">
+                        <properties>
+                          <property name="Description" value="Negative login" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
                 </results>
               </test-suite>
             </results>
