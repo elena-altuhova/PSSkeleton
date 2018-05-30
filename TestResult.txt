@@ -11,8 +11,17 @@ Then available flights are shown
 -> Using app.config
 => PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.NegativeLogin
 Given user is populating login form with john.doe@email.com and password combination
--> done: AirMoldovaDummyTestingSteps.UserIsPopulatingLoginForm("john.doe@email.com", "password") (1.4s)
+-> error: Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:61372
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
 When user clicks Ok button
--> done: AirMoldovaDummyTestingSteps.UserClicksButton("Ok") (2.5s)
+-> skipped because of previous errors
 Then THE ENTERED COMBINATION OF E-EMAIL AND PASSWORD IS NOT CORRECT, PLEASE TRY AGAIN. USER NOT EXIST WITH THIS VALUES. error message appears
--> done: AirMoldovaDummyTestingSteps.ErrorMessageAppears("THE ENTERED COMBI...") (1.1s)
+-> skipped because of previous errors

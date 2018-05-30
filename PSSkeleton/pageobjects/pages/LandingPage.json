@@ -1,0 +1,31 @@
+﻿{
+  "name" : "LandingPage",
+  "type" : "page",
+  "url" : "https://www.airmoldova.md/",
+
+  "elements": [
+    {
+      "name": "login",
+      "locatorType": "xpath",
+      "locator": "//a[text()='Login']"
+    },
+    {
+      "name": "rezervariLogin",
+      "locatorType": "xpath",
+      "locator": "//*[@id='login']"
+    }
+  ],
+
+  "moduleBlock": [
+    {
+      "name": "LoginForm",
+      "type": "module",
+      "locator": "//*[@id='login-box']/form"
+    },
+    {
+      "name": "Generics",
+      "type": "module",
+      "locator": ""
+    }
+  ]
+}

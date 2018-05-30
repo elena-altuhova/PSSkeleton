@@ -68,13 +68,13 @@ namespace PSSkeleton.Features.Web
         public virtual void NegativeLogin()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Negative login", ((string[])(null)));
-#line 3
-this.ScenarioSetup(scenarioInfo);
 #line 4
- testRunner.Given("user is populating login form with john.doe@email.com and password combination", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.When("user clicks Ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("user is populating login form with john.doe@email.com and password combination", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
+ testRunner.When("user clicks Ok button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
  testRunner.Then("THE ENTERED COMBINATION OF E-EMAIL AND PASSWORD IS NOT CORRECT, PLEASE TRY AGAIN." +
                     " USER NOT EXIST WITH THIS VALUES. error message appears", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

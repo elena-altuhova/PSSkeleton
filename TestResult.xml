@@ -1,26 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" total="2" errors="0" failures="0" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2018-05-25" time="14:35:38">
+<test-results name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" total="2" errors="1" failures="0" not-run="0" inconclusive="1" ignored="0" skipped="0" invalid="0" date="2018-05-28" time="07:30:06">
   <environment nunit-version="3.6.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.15063.0" platform="Win32NT" cwd="C:\Users\ealtuhova\source\repos\PSSkeleton" machine-name="EN410078" user="ealtuhova" user-domain="ENDAVA" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" executed="True" result="Success" success="True" time="21.477" asserts="1">
+  <test-suite type="Assembly" name="C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\bin\Debug\PSSkeleton.dll" executed="True" result="Failure" success="False" time="18.698" asserts="0">
     <properties>
-      <property name="_PID" value="11536" />
+      <property name="_PID" value="2264" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+      <stack-trace />
+    </failure>
     <results>
-      <test-suite type="TestSuite" name="PSSkeleton" executed="True" result="Success" success="True" time="21.429" asserts="1">
+      <test-suite type="TestSuite" name="PSSkeleton" executed="True" result="Failure" success="False" time="18.660" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+          <stack-trace />
+        </failure>
         <results>
-          <test-suite type="TestSuite" name="Features" executed="True" result="Success" success="True" time="21.428" asserts="1">
+          <test-suite type="TestSuite" name="Features" executed="True" result="Failure" success="False" time="18.659" asserts="0">
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+              <stack-trace />
+            </failure>
             <results>
-              <test-suite type="TestSuite" name="Android" executed="True" result="Success" success="True" time="9.916" asserts="0">
+              <test-suite type="TestSuite" name="Android" executed="True" result="Success" success="True" time="10.585" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="BookAFlightFeature" description="Book A Flight" executed="True" result="Success" success="True" time="9.893" asserts="0">
+                  <test-suite type="TestFixture" name="BookAFlightFeature" description="Book A Flight" executed="True" result="Success" success="True" time="10.576" asserts="0">
                     <properties>
                       <property name="Description" value="Book A Flight" />
                     </properties>
                     <results>
-                      <test-case name="PSSkeleton.Features.Android.BookAFlightFeature.BookAFlight" description="Book A Flight" executed="True" result="Inconclusive" success="False" time="9.021" asserts="0">
+                      <test-case name="PSSkeleton.Features.Android.BookAFlightFeature.BookAFlight" description="Book A Flight" executed="True" result="Inconclusive" success="False" time="9.981" asserts="0">
                         <properties>
                           <property name="Description" value="Book A Flight" />
                         </properties>
@@ -33,17 +45,70 @@
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="TestSuite" name="Web" executed="True" result="Success" success="True" time="21.428" asserts="1">
+              <test-suite type="TestSuite" name="Web" executed="True" result="Failure" success="False" time="18.659" asserts="0">
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                  <stack-trace />
+                </failure>
                 <results>
-                  <test-suite type="TestFixture" name="AirMoldovaDummyTestingFeature" description="AirMoldova dummy testing" executed="True" result="Success" success="True" time="11.502" asserts="1">
+                  <test-suite type="TestFixture" name="AirMoldovaDummyTestingFeature" description="AirMoldova dummy testing" executed="True" result="Failure" success="False" time="8.068" asserts="0">
                     <properties>
                       <property name="Description" value="AirMoldova dummy testing" />
                     </properties>
+                    <failure>
+                      <message><![CDATA[One or more child tests had errors]]></message>
+                      <stack-trace />
+                    </failure>
                     <results>
-                      <test-case name="PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.NegativeLogin" description="Negative login" executed="True" result="Success" success="True" time="11.497" asserts="1">
+                      <test-case name="PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.NegativeLogin" description="Negative login" executed="True" result="Error" success="False" time="8.067" asserts="0">
                         <properties>
                           <property name="Description" value="Negative login" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:61372
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+TearDown : OpenQA.Selenium.WebDriverException : A exception with a null response was thrown sending an HTTP request to the remote WebDriver server for URL http://localhost:61372/session//window. The status of the exception was ConnectFailure, and the message was: Unable to connect to the remote server
+  ----> System.Net.WebException : Unable to connect to the remote server
+  ----> System.Net.Sockets.SocketException : No connection could be made because the target machine actively refused it [::1]:61372]]></message>
+                          <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at PSSkeleton.pageobjects.LandingPage.get_login() in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\pageobjects\LandingPage.cs:line 9
+   at PSSkeleton.pageobjects.LandingPage.ClickLogin() in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\pageobjects\LandingPage.cs:line 18
+   at PSSkeleton.ui.stepdefs.AirMoldovaDummyTestingSteps.UserIsPopulatingLoginForm(String login, String password) in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\stepdefs\ui\AirMoldovaDummyTestingSteps.cs:line 17
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.ScenarioCleanup()
+   at PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.NegativeLogin() in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\features\web\AirMoldovaDummyFeature.feature:line 6
+--TearDown
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at PSSkeleton.ui.BrowserFactory.CloseAllDrivers() in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\ui\BrowserFactory.cs:line 101
+   at PSSkeleton.ui.stepdefs.hooks.StepHooks.CloseApplication() in C:\Users\ealtuhova\source\repos\PSSkeleton\PSSkeleton\ui\stepdefs\hooks\StepHooks.cs:line 16
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.InvokeHook(IBindingInvoker invoker, IHookBinding hookBinding, HookType hookType)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.FireEvents(HookType hookType)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnScenarioEnd()
+   at PSSkeleton.Features.Web.AirMoldovaDummyTestingFeature.ScenarioTearDown()
+--WebException
+   at System.Net.HttpWebRequest.GetResponse()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+--SocketException
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

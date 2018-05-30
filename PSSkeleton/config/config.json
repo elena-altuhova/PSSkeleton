@@ -2,8 +2,14 @@
   "env": {
     "uri": "http://127.0.0.1:4723/wd/hub"
   },
-  "runner":  {
+  "runner": {
     "platform": "Desktop",
-    "browser": "Chrome"
+    "browser": "Chrome",
+    "url": "https://www.airmoldova.md/"
+  },
+  "framework": {
+    "pages": "\\pageobjects\\pages\\",
+    "modules": "\\pageobjects\\modules\\",
+    "drivers":  "\\resources\\drivers\\"
   }
   }

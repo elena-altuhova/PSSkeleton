@@ -1,0 +1,17 @@
+﻿{
+  "name": "LoginForm",
+  "type": "module",
+
+  "elements": [
+      {
+        "name": "email",
+        "locatorType": "xpath",
+        "locator": "//*[@id='emailLogin']"
+      },
+      {
+        "name": "password",
+        "locatorType": "xpath",
+        "locator": "//*[@id='passwordLogin']"
+      }
+  ]
+}

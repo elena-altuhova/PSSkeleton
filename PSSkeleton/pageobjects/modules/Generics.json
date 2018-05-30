@@ -1,0 +1,18 @@
+﻿{
+  "name": "Generics",
+  "type": "module",
+
+  "elements": [
+    {
+      "name": "okButton",
+      "locatorType": "xpath",
+      "locator": "//*[@id='login-box']/form/button"
+    },
+    {
+      "name": "errorMessage",
+      "locatorType": "xpath",
+      "locator": "//div[1]/div/div/div/div/ul/li"
+    }
+  ]
+
+}

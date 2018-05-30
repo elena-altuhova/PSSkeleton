@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using PSSkeleton.pageobjects;
+using PSSkeleton.pageobjects.WebPage;
 using System;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -8,29 +8,29 @@ namespace PSSkeleton.ui.stepdefs
 {
     public class AirMoldovaDummyTestingSteps : AbstractStepDefs
     {
-        LandingPage landingPage;
+        WebPageObject LandingPage;
 
         [Given(@"user is populating login form with (.*) and (.*) combination")]
         public void UserIsPopulatingLoginForm(string login, string password)
         {
-            landingPage = new LandingPage(_driver);
-            landingPage.ClickLogin();
-            landingPage.ClickRezervariLogin();
-            landingPage.SetEmailLogin(login);
-            landingPage.SetPassword(password);
+            LandingPage = new WebPageObject("LandingPage", _driver);
+            LandingPage.GetElement("login").Click();
+            LandingPage.GetElement("rezervariLogin").Click();
+            LandingPage.GetElement("email").SendKeys(login);
+            LandingPage.GetElement("password").SendKeys(password);
         }
         
         [When(@"user clicks (Ok|Close) button")]
         public void UserClicksButton(string buttonName)
         {
-            landingPage.ClickOk();
+            LandingPage.GetElement("okButton").Click();
         }
 
         [Then(@"(.*) error message appears")]
         public void ErrorMessageAppears(String errorMessage)
         {
             Thread.Sleep(1000);
-            Assert.AreEqual(landingPage.GetErrorMessage(), errorMessage, "Error message is wrong or empty");
+            Assert.AreEqual(LandingPage.GetElement("errorMessage").Text, errorMessage, "Error message is wrong or empty");
         }
     }
 }

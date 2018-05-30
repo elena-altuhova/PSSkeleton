@@ -44,7 +44,7 @@
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.5.4\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\packages\NLog.4.5.5\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
@@ -72,14 +72,13 @@
     <Reference Include="WebDriver, Version=3.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.12.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.3.0.1\lib\net40\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=3.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.12.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="config\enums\DriverName.cs" />
-    <Compile Include="config\configuration\FrameworkConfiguration.cs" />
     <Compile Include="features\android\AndroidDummyFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,17 +89,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AirMoldovaDummyFeature.feature</DependentUpon>
     </Compile>
-    <Compile Include="pageobjects\AbstractPageObject.cs" />
-    <Compile Include="pageobjects\LandingPage.cs" />
+    <Compile Include="pageobjects\WebPage\Locators.cs" />
+    <Compile Include="pageobjects\WebPage\poco\Module.cs" />
+    <Compile Include="pageobjects\WebPage\poco\ModuleBlock.cs" />
+    <Compile Include="pageobjects\WebPage\poco\Page.cs" />
+    <Compile Include="pageobjects\WebPage\WebElement.cs" />
+    <Compile Include="pageobjects\WebPage\WebPageObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="capabilities\AndroidCapabilities.cs" />
     <Compile Include="capabilities\GetAndroidCapabilities.cs" />
     <Compile Include="capabilities\IDesCapabilities.cs" />
     <Compile Include="stepdefs\android\BookAFlightSteps.cs" />
-    <Compile Include="ui\BrowserFactory.cs" />
+    <Compile Include="stepdefs\BrowserFactory.cs" />
     <Compile Include="stepdefs\AbstractStepDefs.cs" />
     <Compile Include="stepdefs\ui\AirMoldovaDummyTestingSteps.cs" />
-    <Compile Include="ui\stepdefs\hooks\StepHooks.cs" />
+    <Compile Include="stepdefs\hooks\StepHooks.cs" />
+    <Compile Include="utils\JsonUtils.cs" />
     <Compile Include="utils\PathUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,10 +123,25 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AirMoldovaDummyFeature.feature.cs</LastGenOutput>
     </None>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="config\capabilities\android_capabilities.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pageobjects\modules\Generics.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pageobjects\pages\LandingPage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="pageobjects\modules\LoginForm.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
